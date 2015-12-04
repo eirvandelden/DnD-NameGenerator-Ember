@@ -15,3 +15,11 @@
 /libpeerconnection.log
 npm-debug.log
 testem.log
+
+# cordova stuff
+cordova/platforms/*
+cordova/plugins/*
+cordova/www/*
+!cordova/platforms/.gitkeep
+!cordova/plugins/.gitkeep
+node_modules/
