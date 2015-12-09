@@ -19,6 +19,6 @@ export default Ember.Component.extend({
       return beginning[rbeginning] + middle[rmiddle] + last[rlast];
   },
    setName: function () {
-       this.setProperties({'name': this.generateName()})
+       this.set('name', this.generateName())
    }.on('init')
 });
