@@ -7,17 +7,18 @@ var last = ['a','ac', 'ai', 'al', 'am', 'an', 'ar', 'ea', 'el', 'er', 'ess', 'el
 
 export default Ember.Component.extend({
   actions: {
-    generateName() {
+    newName() {
+        this.setName();
+    }
+  },
+  generateName: function () {
       var rbeginning = _number.random(0, beginning.length - 1),
           rmiddle = _number.random(0, middle.length - 1),
           rlast = _number.random(0, last.length - 1);
 
-      var name = beginning[rbeginning] + middle[rmiddle] + last[rlast];
-
-      this.setProperties({'name': name});
-    }
+      return beginning[rbeginning] + middle[rmiddle] + last[rlast];
   },
-  name: Ember.computed('bla', function () {
-    this.sendAction('generateName')
-  })
+   setName: function () {
+       this.setProperties({'name': this.generateName()})
+   }.on('init')
 });
