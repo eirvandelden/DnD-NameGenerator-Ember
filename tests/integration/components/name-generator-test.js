@@ -13,4 +13,5 @@ test('it renders', function(assert) {
   this.render(hbs`{{name-generator}}`);
 
   assert.notEqual(this.$().text().trim().length, 0);
+  assert.notEqual(this.$('button').length, 0);
 });
