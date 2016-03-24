@@ -12,3 +12,10 @@ button {
     border: none;
 }
 
+.drow button{
+    top: 65%;
+}
+
+.drow h1{
+    top:52.5%;
+}
