@@ -6,11 +6,20 @@ var middle = ['bar', 'ched', 'dell', 'far'];
 var last = ['a','ac', 'ai', 'al', 'am', 'an', 'ar', 'ea', 'el', 'er', 'ess', 'elt', 'ic','id', 'il', 'in', 'is', 'of', 'us'];
 
 export default Ember.Component.extend({
-    name: Ember.computed('generatedName', function () {
-        var rbeginning = _number.random(0, beginning.length - 1),
-            rmiddle = _number.random(0, middle.length - 1),
-            rlast = _number.random(0, last.length - 1);
+  setup: Ember.on('init', function () { this.setName(); }),
+  actions: {
+    newName() {
+      this.setName();
+    }
+  },
+  generateName() {
+    var rbeginning = _number.random(0, beginning.length - 1),
+        rmiddle = _number.random(0, middle.length - 1),
+        rlast = _number.random(0, last.length - 1);
 
-        return beginning[rbeginning] + middle[rmiddle] + last[rlast];
-    })
+    return beginning[rbeginning] + middle[rmiddle] + last[rlast];
+  },
+  setName() {
+    this.set('name', this.generateName());
+  }
 });

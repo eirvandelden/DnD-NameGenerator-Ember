@@ -1,4 +1,10 @@
-# Dmassist
+# Dungeon Master Assist
+
+[![Build Status](https://travis-ci.org/eirvandelden/DMAssist.svg?branch=master)](https://travis-ci.org/eirvandelden/DMAssist)
+
+This app is built by a Dungeon Master, for Dungeon Masters. It includes tools or shortcuts to things I, as a DM, need at hand quickly.
+
+This app is built with [EmberJS](http://emberjs.com). The goal is to build a Hybrid Mobile & Desktop App using [Apache Cordova](https://cordova.apache.org)
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
