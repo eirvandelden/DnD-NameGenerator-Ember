@@ -50,7 +50,7 @@ var given_prefixes = [
         ["Lael", "Llt", "Iron"],
         ["Lar", "Les", "Bound"],
         ["Lineer", "Mourn", "Legendary"],
-        ["Lird", "Ryld", "Slave"]
+        ["Lird", "Ryld", "Slave"],
         ["Lua", "Lyme", "Crystal"],
         ["Mal", "Malag", "Secret"],
         ["May", "Mas", "Beauty"],
@@ -210,7 +210,7 @@ function form1() {
          suffix = _number.random(0, given_suffixes.length -1);
 
     return given_prefixes[prefix][0] + given_suffixes[suffix][0];
-};
+}
 
 function form2(){
      var prefix = _number.random(0, given_prefixes.length -1),
@@ -218,7 +218,7 @@ function form2(){
          suffsuffix = _number.random(0, given_suffixes.length -1);
 
     return given_prefixes[prefix][0] + given_suffixes[suffix][0] + given_suffixes[suffsuffix][0];
-};
+}
 
 function form3(){
      var prefix = _number.random(0, given_prefixes.length -1),
@@ -226,7 +226,7 @@ function form3(){
          suffsuffix = _number.random(0, given_suffixes.length -1);
 
     return given_prefixes[prefix][0] + given_suffixes[suffix][0] + "'" + given_suffixes[suffsuffix][0];
-};
+}
 
 function form4() {
      var prefix = _number.random(0, given_prefixes.length -1),
